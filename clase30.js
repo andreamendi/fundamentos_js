@@ -9,7 +9,6 @@ function obtenerPersonaje(id, callback){
     $.get(url, opts, function (persona) {
         console.log(`Hola, yo soy ${persona.name}`)
 
-
         if (callback){
             callback()
         }
@@ -21,7 +20,7 @@ obtenerPersonaje(1, function () {
     obtenerPersonaje(2, function () {
         obtenerPersonaje(3, function (){
             obtenerPersonaje(4, function (){
-                obtenerPersonaje(6, function (){
+                obtenerPersonaje(6, function (){ 
                     obtenerPersonaje(7)
                 })
             })
